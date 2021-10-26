@@ -7,9 +7,9 @@ echo 'export PATH="$HOME/.local/bin":$PATH' >>~/.zshrc
 ##Copying stuff
 cp -f $HOME/dots/bin/* $HOME/.local/bin/
 ##
-for FILE in $HOME/dots/config/*
+for FILE in $HOME/dots/config
   do
-	  cp -Rf $FILE $HOME/.config
+	  cp -Rf $FILE $HOME/.config/
   done
 ##
 ##Manual reload needed
