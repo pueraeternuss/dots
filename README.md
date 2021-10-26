@@ -20,16 +20,16 @@
 
 - **important** if you already have .local/bin path exported, make sure you comment out the export lines in the install script. it's not a big deal, just to avoid duplicate lines in your shell configs.
 
--backup your .config & .local folders. 
--clone this repo in your home directory.
--make sure you install the fonts and dependencies mentioned above.
--run the install script.
+#backup your .config & .local folders. 
+#clone this repo in your home directory.
+#make sure you install the fonts and dependencies mentioned above.
+#run the install script.
 
 ```
 cd dots && ./install
 
 ```
--reload your session.
+#reload your session.
 
 -**Keybind** ~ windowsKey+x to spawn terminal. use it to find the rest of the keybindings in .config/sway/config
 
