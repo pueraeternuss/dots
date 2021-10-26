@@ -1,0 +1,105 @@
+{
+    "modules-left": ["custom/menu", "custom/separator", "custom/files", "custom/browser",  "custom/music", "custom/geany", "custom/term"],
+    "modules-right": ["sway/workspaces", "custom/separator", "pulseaudio", "network", "custom/separator", "custom/power"],
+    
+    "position": "left", // Waybar position (top|bottom|left|right)
+    
+    // Modules configuration
+    "custom/music":{
+        "format": "",
+        "on-click": "brave --app=https://youtube.com/",
+        "tooltip": false, 
+      }, 
+    "custom/files":{
+        "format": "",
+        "on-click": "nemo",
+        "tooltip": false,
+      }, 
+    
+    "custom/browser":{
+        "format": "",
+        "on-click": "brave",
+        "tooltip": false,
+      }, 
+    "custom/geany":{
+        "format": "",
+        "on-click": "geany",
+        "tooltip": false,
+      }, 
+
+    "custom/power":{
+        "format": "襤",
+        "on-click": "powermenu",
+        "tooltip": false,
+      },
+    "custom/menu":{
+        "format": "",
+        "on-click": "rofi -show",
+        "tooltip": false,
+      },
+
+    "custom/separator":{
+        "format": "",
+        "tooltip": false,
+      },
+
+    "custom/term":{
+        "format": "",
+        "on-click": "foot",
+        "tooltip": false,
+      },
+
+     "sway/workspaces": {
+         "disable-scroll": false,
+         "current-only": true,
+         "disable-markup": true,
+         "disable-click": true,
+         "format": "{icon}",
+         "tooltip": false,
+         "format-icons": {
+             "1": "I",
+             "2": "II",
+             "3": "III",
+             "4": "IV",
+             "5": "V",
+             "6": "VI",
+             "7": "VII",
+             "8": "VIII",
+             "9": "IX",
+             "10": "X",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     }, 
+     "network": {
+        "format-wifi": "",
+        /* "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ", */
+        /* "format-linked": "{ifname} (No IP)  ", */
+        "format-disconnected": "⚠",
+        /* "format-alt": "{ifname}: {ipaddr}/{cidr}" */
+        "on-click": "foot --hold -e nmtui",
+        "tooltip": false,
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "   {format_source}",
+        "format-muted": "",
+        "format-source": "{volume}%  ",
+        "format-source-muted": " ",
+        "tooltip": false,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": " ",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+       } 

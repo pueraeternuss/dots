@@ -1,0 +1,17 @@
+#!/bin/sh
+#make dir if not existing
+mkdir -p $HOME/.local/bin/
+## Comment these out if you already have this path exported in your shell
+echo 'export PATH="$HOME/.local/bin":$PATH' >>~/.bash_profile
+echo 'export PATH="$HOME/.local/bin":$PATH' >>~/.zshrc
+##Copying stuff
+cp -f $HOME/dots/bin/* $HOME/.local/bin/
+##
+for FILE in $HOME/dots/config/*
+  do
+	  cp -Rf $FILE $HOME/.config
+  done
+##
+##Manual reload needed
+echo "All done! Congrats :-)"
+echo "You need to logout and log back in for changes to take effect"

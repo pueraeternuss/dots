@@ -1,0 +1,8 @@
+#!/bin/sh
+
+killall -q xob
+killall -q volume
+##
+volume | xob -s vol
+##
+sleep 1 && killall xob-start
