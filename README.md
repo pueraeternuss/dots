@@ -6,7 +6,7 @@
 - **wm** ~ sway-borders-git
 - **bar** ~ waybar
 - **fonts** ~ Cantarell & Cascadia code 
-- **Resolution** ~ 1366x768
+- **Resolution** ~ 1366x768 (if you have different resolutions, adjust the paddings and margins in waybar/style.css file and gaps in sway/config to fit you screen)
 
 ## dependencies
 
@@ -20,14 +20,16 @@
 
 - **important** if you already have .local/bin path exported, make sure you comment out the export lines in the install script. it's not a big deal, just to avoid duplicate lines in your shell configs.
 
-0 - backup your .config & .local folders. 
-1 - clone this repo in your home directory.
-2 - make sure you install the fonts and dependencies mentioned above.
-3 - run the install script.
+-backup your .config & .local folders. 
+-clone this repo in your home directory.
+-make sure you install the fonts and dependencies mentioned above.
+-run the install script.
 
-```cd dots && ./install
 ```
-4 - reload your session.
+cd dots && ./install
+
+```
+-reload your session.
 
 -**Keybind** ~ windowsKey+x to spawn terminal. use it to find the rest of the keybindings in .config/sway/config
 
